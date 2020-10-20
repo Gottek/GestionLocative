@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Amarl\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Amarl\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Amarl\Development\C# Project Q5\Backend" t="IncludeRecursive">
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="Backend.csproj" t="IncludeRecursive" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="HomeController.cs" t="Include" />
+        <e p="LeaseController.cs" t="Include" />
+        <e p="OwnerController.cs" t="Include" />
+      </e>
+      <e p="Data" t="Include">
+        <e p="CommanderContexte.cs" t="Include" />
+        <e p="HomeRepository.cs" t="Include" />
+        <e p="LeaseRepository.cs" t="Include" />
+        <e p="objectOjbect.cs" t="Include" />
+        <e p="OwnerRepository.cs" t="Include" />
+      </e>
+      <e p="Dtos" t="Include">
+        <e p="HomeDtos" t="Include">
+          <e p="HomeCreateDtos.cs" t="Include" />
+          <e p="HomeReadDtos.cs" t="Include" />
+          <e p="HomeUpdateDtos.cs" t="Include" />
+        </e>
+        <e p="LeaseDtos" t="Include">
+          <e p="LeaseCreateDtos.cs" t="Include" />
+          <e p="LeaseReadDtos.cs" t="Include" />
+          <e p="LeaseUpdateDtos.cs" t="Include" />
+        </e>
+        <e p="OwnerDtos" t="Include">
+          <e p="OwnerCreateDtos.cs" t="Include" />
+          <e p="OwnerReadDtos.cs" t="Include" />
+          <e p="OwnerUpdateDtos.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Interfaces" t="Include">
+        <e p="IHomes.cs" t="Include" />
+        <e p="ILease.cs" t="Include" />
+        <e p="IOwner.cs" t="Include" />
+      </e>
+      <e p="Migrations" t="Include">
+        <e p="20201017170542_initial.cs" t="Include" />
+        <e p="20201017170542_initial.Designer.cs" t="Include" />
+        <e p="20201019170349_modfift.cs" t="Include" />
+        <e p="20201019170349_modfift.Designer.cs" t="Include" />
+        <e p="CommanderContexteModelSnapshot.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Home.cs" t="Include" />
+        <e p="Lease.cs" t="Include" />
+        <e p="Owner.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="Backend.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Profiles" t="Include">
+        <e p="Mapping.cs" t="Include" />
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+    </e>
+  </component>
+</project>

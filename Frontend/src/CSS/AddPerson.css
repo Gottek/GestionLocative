@@ -1,0 +1,20 @@
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.ColContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.ColContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

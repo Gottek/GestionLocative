@@ -2,14 +2,12 @@ import React from 'react';
 import {useSelector} from "react-redux";
 import CardView from "../Components/CardView";
 import Guarantor from "../Assets/Images/guarantor.jpg";
-import Owner from "../Assets/Images/Owner.jpg";
 
-export const GuarantorPage = () =>{
+export const GuarantorPage = () => {
 
     // j'ai pas envie de fetch chaque fois le ownerArray
     const guarantorArray = useSelector(state => state.reducerPersonKey.allGuarantor);
 
-    console.log(guarantorArray)
     return (
         <div className={"mainContainer"}>
             {guarantorArray.map((item, index) => {
@@ -27,8 +25,8 @@ export const GuarantorPage = () =>{
                     <CardView
                         key={index}
                         id={item.id}
-                        typeItem={"Owner"}
-                        imagePath={Owner}
+                        typeItem={"Guarantor"}
+                        imagePath={Guarantor}
                         title={item.firstName + " " + item.lastName}
                         subheader={item.birthDate}
                         cont={arrayValue}

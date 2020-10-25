@@ -33,6 +33,8 @@ import {GuarantorPage} from "../Pages/Guarantor";
 import {CreateDocumentPage} from "../Pages/CreateDocument";
 import {useDispatch} from "react-redux";
 import {putAllPersons} from "../Store/Actions/PersonAction";
+import {putAllBuilding} from "../Store/Actions/BuildingAction";
+import {putAllLease} from "../Store/Actions/LeaseAction";
 
 const drawerWidth = 240;
 
@@ -122,7 +124,9 @@ const iconRedirection =[
 export default function MiniDrawer() {
     const dispatch = useDispatch();
     useEffect(()=>{
+        dispatch(putAllBuilding());
         dispatch(putAllPersons());
+        dispatch(putAllLease());
     },[dispatch])
 
     const classes = useStyles();

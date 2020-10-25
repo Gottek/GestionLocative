@@ -7,7 +7,6 @@ import {useSelector} from "react-redux";
 export const PersonPage = () => {
     // j'ai pas envie de fetch chaque fois le ownerArray
     const ownerArray = useSelector(state => state.reducerPersonKey.allOwner);
-    // console.log(ownerArray)
     return (
         <div className={"mainContainer"}>
             {ownerArray.map((item, index) => {

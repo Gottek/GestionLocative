@@ -1,36 +1,29 @@
-import {addAPerson, deleteItem, getAllPersons} from "../../Api/api";
+import {addItem, deleteItem, getAllItems} from "../../Api/api";
 
-export const ADD_GUARANTOR = 'ADD_GUARANTOR';
-export const ADD_OWNER = 'ADD_OWNER';
-export const DELETE_GUARANTOR = 'DELETE_GUARANTOR';
-export const DELETE_OWNER = 'DELETE_OWNER';
-export const GET_ALL_GUARANTOR = 'GET_ALL_GUARANTOR';
-export const GET_ALL_OWNER = 'GET_ALL_OWNER';
-export const GET_PERSON = 'GET_PERSON';
-export const PUT_ALL_PERSONS = 'PUT_ALL_PERSONS';
+export const ADD_BUILDING = 'ADD_BUILDING';
+export const DELETE_BUILDING = 'DELETE_BUILDING';
+export const GET_BUILDING = 'GET_BUILDING';
+export const PUT_ALL_BUILDING = 'PUT_ALL_BUILDING';
 
-//
-// export const addPerson = person => {
-//     return async dispatch => {
-//         const newPerson = await addAPerson(person);
-//         const ACTION=(newPerson.nationalRegister) ? ADD_OWNER:ADD_GUARANTOR;
-//         dispatch({type: ACTION, aSinglePerson: newPerson});
-//     }
-// }
-// export const putAllPersons=()=>{
-//     return async dispatch => {
-//         const allPersonsArray = await getAllPersons();
-//         dispatch({type: PUT_ALL_PERSONS, allPersons: allPersonsArray});
-//     }
-// }
-//
-// export const getPerson = id => ({type: GET_PERSON, aSinglePerson: id});
 
-export const deleteHome = (id,typeItem) => {
+export const addBuilding = building => {
     return async dispatch => {
-        await deleteItem(id,"Owner");
-        const ACTION =(typeItem==="Owner") ?DELETE_OWNER:DELETE_GUARANTOR;
-        dispatch({type: ACTION, personId: id})
+        const newBuilding = await addItem("home", building);
+        dispatch({type: ADD_BUILDING, aSingleBuilding: newBuilding});
+    }
+}
+export const putAllBuilding = () => {
+    return async dispatch => {
+        const allBuildingArray = await getAllItems("home");
+        dispatch({type: PUT_ALL_BUILDING, allBuilding: allBuildingArray});
     }
 }
 
+export const getBuilding = id => ({type: GET_BUILDING, aSingleBuilding: id});
+
+export const deleteBuilding = (id) => {
+    return async dispatch => {
+        await deleteItem(id, "home");
+        dispatch({type: DELETE_BUILDING, buildingId: id})
+    }
+}

@@ -15,8 +15,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {useDispatch} from "react-redux";
 import {deletePerson} from "../Store/Actions/PersonAction";
-import {deleteHome} from "../Store/Actions/BuildingAction";
+import {deleteBuilding, deleteHome} from "../Store/Actions/BuildingAction";
 import {deleteLease} from "../Store/Actions/LeaseAction";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
 export default function PersonalCard(props) {
     const dispatch = useDispatch();
     const classes = useStyles();
+    const history = useHistory();
+
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -52,14 +55,16 @@ export default function PersonalCard(props) {
     };
 
     const deleteItem = (id, typeItem) => {
-        if (typeItem === "Home") dispatch(deleteHome(id, typeItem))
+        if (typeItem === "Home") dispatch(deleteBuilding(id, typeItem))
         else if (typeItem === "Owner" || typeItem === "Guarantor") dispatch(deletePerson(id, typeItem))
         else dispatch(deleteLease(id, typeItem))
     }
-
+    const redirection=()=>{
+        history.push("/AddBuilding");
+    }
     return (
         <div>
-            <Card className={classes.root}>
+            <Card className={classes.root} onClick={redirection} >
                 <CardHeader
                     avatar={
                         <Avatar aria-label="recipe" className={classes.avatar}>

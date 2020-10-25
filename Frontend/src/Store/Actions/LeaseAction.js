@@ -1,36 +1,30 @@
-import {addAPerson, deleteItem, getAllPersons} from "../../Api/api";
+import {addItem, deleteItem, getAllItems} from "../../Api/api";
 
-export const ADD_GUARANTOR = 'ADD_GUARANTOR';
-export const ADD_OWNER = 'ADD_OWNER';
-export const DELETE_GUARANTOR = 'DELETE_GUARANTOR';
-export const DELETE_OWNER = 'DELETE_OWNER';
-export const GET_ALL_GUARANTOR = 'GET_ALL_GUARANTOR';
-export const GET_ALL_OWNER = 'GET_ALL_OWNER';
-export const GET_PERSON = 'GET_PERSON';
-export const PUT_ALL_PERSONS = 'PUT_ALL_PERSONS';
+export const ADD_LEASE = 'ADD_LEASE';
+export const DELETE_LEASE = 'DELETE_LEASE';
+export const GET_LEASE = 'GET_LEASE';
+export const PUT_ALL_LEASE = 'PUT_ALL_LEASE';
 
-//
-// export const addPerson = person => {
-//     return async dispatch => {
-//         const newPerson = await addAPerson(person);
-//         const ACTION=(newPerson.nationalRegister) ? ADD_OWNER:ADD_GUARANTOR;
-//         dispatch({type: ACTION, aSinglePerson: newPerson});
-//     }
-// }
-// export const putAllPersons=()=>{
-//     return async dispatch => {
-//         const allPersonsArray = await getAllPersons();
-//         dispatch({type: PUT_ALL_PERSONS, allPersons: allPersonsArray});
-//     }
-// }
-//
-// export const getPerson = id => ({type: GET_PERSON, aSinglePerson: id});
 
-export const deleteLease = (id,typeItem) => {
+export const addLease = lease => {
     return async dispatch => {
-        await deleteItem(id,"Owner");
-        const ACTION =(typeItem==="Owner") ?DELETE_OWNER:DELETE_GUARANTOR;
-        dispatch({type: ACTION, personId: id})
+        const newLease = await addItem("lease",lease);
+        dispatch({type: ADD_LEASE, aSingleLease: newLease});
+    }
+}
+export const putAllLease = () => {
+    return async dispatch => {
+        const allLeaseArray = await getAllItems("lease");
+        dispatch({type: PUT_ALL_LEASE, allLease: allLeaseArray});
     }
 }
 
+export const getLease = id => ({type: GET_LEASE, aSingleLease: id});
+
+export const deleteLease = (id) => {
+    return async dispatch => {
+        console.log("je suis dans l'action avec l'id"+id);
+        await deleteItem(id, "lease");
+        dispatch({type: DELETE_LEASE, leaseId: id})
+    }
+}

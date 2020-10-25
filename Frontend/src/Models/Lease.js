@@ -1,4 +1,4 @@
-class Person{
+class Lease{
     constructor(id,civility, sex,firstName,lastName,address, zipCode, city, country,email,gsmNumber) {
         this.id=id;
         this.civility=civility;
@@ -13,4 +13,4 @@ class Person{
         this.gsmNumber=gsmNumber;
     }
 }
-export default Person;
+export default Lease;

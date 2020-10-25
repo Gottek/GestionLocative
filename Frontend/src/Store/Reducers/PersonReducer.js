@@ -28,7 +28,8 @@ export const PersonReducer = (state = initialState, action) => {
             const deletedOwnerArray =state.allOwner.filter(value => value.id !== action.personId)
             return {...state, allOwner: deletedOwnerArray};
         case DELETE_GUARANTOR:
-            return {};
+            const deletedGuarantorArray =state.allGuarantor.filter(value => value.id !== action.personId)
+            return {...state, allGuarantor: deletedGuarantorArray};
         default:
             return state
     }

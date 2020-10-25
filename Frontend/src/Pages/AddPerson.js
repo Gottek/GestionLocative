@@ -6,8 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import RadioButtonsGroup from "../Components/RadioButton";
 import {useDispatch} from "react-redux";
 import {addPerson} from "../Store/Actions/PersonAction";
-import Owner from "../Models/Owner";
-import Guarantor from "../Models/Guarantor";
+import Divider from "@material-ui/core/Divider";
 
 
 export const AddPersonPage = () => {
@@ -25,7 +24,7 @@ export const AddPersonPage = () => {
         <Form
             onSubmit={onSubmit}
             subscription={{submitting: true}}
-            render={({handleSubmit, form, submitting, pristine, values}) => (
+            render={({handleSubmit}) => (
                 <form onSubmit={handleSubmit}>
                     <div className="MainContainer">
                         <div className="ColContainer">
@@ -38,53 +37,62 @@ export const AddPersonPage = () => {
                                     <RadioButtonsGroup valeur={{...input}} RadioObject={radioObject} name={"gender"}/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="firstName">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Prénom"} variant="outlined"/>}
+                                    <TextField fullWidth  {...input} id="outlined-basic" label={"Prénom"}
+                                               variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="lastName">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Nom"} variant="outlined"/>}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"Nom"}
+                                               variant="outlined"/>}
                                 </Field>
                                 {/*<Field type="radio" subscription={{value: true}} name="personType">{({input, meta}) =>*/}
                                 {/*    <RadioButtonsGroup valeur={{...input}} RadioObject={radioObjectLoc} name={"type"}/>}*/}
                                 {/*</Field>*/}
                             </div>
+                            <Divider orientation="vertical" flexItem style={{margin: 20}}/>
                             <div className="ColContent">
                                 <Field subscription={{value: true}} name="zipCode">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Code postal"}
+                                    <TextField type="number" fullWidth {...input} id="outlined-basic" label={"Code postal"}
                                                variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="city">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Ville"} variant="outlined"/>}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"Ville"}
+                                               variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="birthDate">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Date de naissance"}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"Date de naissance"}
                                                variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="age">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Age"} variant="outlined"/>}
+                                    <TextField type="number" fullWidth {...input} id="outlined-basic" label={"Age"}
+                                               variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="country">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Pays"} variant="outlined"/>}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"Pays"}
+                                               variant="outlined"/>}
                                 </Field>
 
                             </div>
+                            <Divider orientation="vertical" flexItem style={{margin: 20}}/>
                             <div className="ColContent">
                                 <Field subscription={{value: true}} name="address">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"address"} variant="outlined"/>}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"address"}
+                                               variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="placeOfBirth">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"place de naissance"}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"place de naissance"}
                                                variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="phoneNumber">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Numero de téléphone"}
+                                    <TextField type="number" fullWidth {...input} id="outlined-basic" label={"Numero de téléphone"}
                                                variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="nationalRegister">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Numéro national"}
+                                    <TextField type="number" fullWidth {...input} id="outlined-basic" label={"Numéro national"}
                                                variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="email">{({input, meta}) =>
-                                    <TextField {...input} id="outlined-basic" label={"Email"} variant="outlined"/>}
+                                    <TextField fullWidth {...input} id="outlined-basic" label={"Email"}
+                                               variant="outlined"/>}
                                 </Field>
                             </div>
                         </div>

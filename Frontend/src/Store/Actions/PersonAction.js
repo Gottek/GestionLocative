@@ -1,11 +1,11 @@
-import {addItem, deleteItem, getAllItems} from "../../Api/api";
+import {addItem, deleteItem, getAllItems, updateItem} from "../../Api/api";
 
 export const ADD_GUARANTOR = 'ADD_GUARANTOR';
 export const ADD_OWNER = 'ADD_OWNER';
 export const DELETE_GUARANTOR = 'DELETE_GUARANTOR';
 export const DELETE_OWNER = 'DELETE_OWNER';
-export const GET_ALL_GUARANTOR = 'GET_ALL_GUARANTOR';
-export const GET_ALL_OWNER = 'GET_ALL_OWNER';
+export const UPDATE_OWNER = 'UPDATE_OWNER';
+export const UPDATE_GUARANTOR = 'UPDATE_GUARANTOR';
 export const GET_PERSON = 'GET_PERSON';
 export const PUT_ALL_PERSONS = 'PUT_ALL_PERSONS';
 
@@ -24,7 +24,6 @@ export const putAllPersons = () => {
     }
 }
 
-export const getPerson = id => ({type: GET_PERSON, aSinglePerson: id});
 
 export const deletePerson = (id, typeItem) => {
     return async dispatch => {
@@ -33,4 +32,12 @@ export const deletePerson = (id, typeItem) => {
         dispatch({type: ACTION, personId: id})
     }
 }
+export const updatePerson = (person,type) => {
+    return async dispatch => {
+        await updateItem(person.id, "owner",person);
+        const ACTION = (type==="Owner") ? UPDATE_OWNER : UPDATE_GUARANTOR;
+        dispatch({type: ACTION, newPersonUpdated: person})
+    }
+}
+
 

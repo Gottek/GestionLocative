@@ -23,6 +23,6 @@ export const deleteItem = async (id, item) => {
 }
 export const updateItem = async (id, item,object) => {
     await axios.put(`http://localhost:5000/api/${item}/${id}`,object)
-        .then(r => console.log("delete OK"))
+        .then(r => console.log("update OK"))
         .catch(err => console.log(err));
 }

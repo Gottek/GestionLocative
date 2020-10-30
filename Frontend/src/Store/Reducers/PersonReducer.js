@@ -1,4 +1,11 @@
-import {ADD_GUARANTOR, ADD_OWNER, DELETE_GUARANTOR, DELETE_OWNER, PUT_ALL_PERSONS} from "../Actions/PersonAction";
+import {
+    ADD_GUARANTOR,
+    ADD_OWNER,
+    DELETE_GUARANTOR,
+    DELETE_OWNER,
+    PUT_ALL_PERSONS, UPDATE_GUARANTOR,
+    UPDATE_OWNER
+} from "../Actions/PersonAction";
 
 const initialState = {
     allGuarantor: [],
@@ -30,6 +37,16 @@ export const PersonReducer = (state = initialState, action) => {
         case DELETE_GUARANTOR:
             const deletedGuarantorArray =state.allGuarantor.filter(value => value.id !== action.personId)
             return {...state, allGuarantor: deletedGuarantorArray};
+        case UPDATE_OWNER:
+            const newOwnerUpdated={...action.newPersonUpdated}
+            const updatedOwnerArray =state.allOwner.filter(value => value.id !== newOwnerUpdated.id)
+            updatedOwnerArray.push(newOwnerUpdated)
+            return {...state, allOwner: updatedOwnerArray};
+        case UPDATE_GUARANTOR:
+            const newGuarantorUpdated={...action.newPersonUpdated}
+            const updatedGuarantorArray =state.allGuarantor.filter(value => value.id !== newGuarantorUpdated.id)
+            updatedGuarantorArray.push(newGuarantorUpdated)
+            return {...state, allGuarantor: updatedGuarantorArray};
         default:
             return state
     }

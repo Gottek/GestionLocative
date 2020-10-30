@@ -16,21 +16,21 @@ export const LeasePage = () => {
                 let houseObject = homeArray.find(items => items.id === item.homeId)
                 let ownerObject = ownerArray.find(items => items.id === item.personId)
                 const arrayValue = [
-                    `Date de début de bail: ${item.leaseStartDate}`,
-                    `Datede finde bail: ${item.leaseEndDate}`,
+                    `Date de début de bail: ${JSON.stringify(item.leaseStartDate).substring(1, 11)}`,
+                    `Datede fin de bail: ${JSON.stringify(item.leaseEndDate).substring(1, 11)}`,
                     `Durée du bail: ${item.leaseTerm}`,
                     `Index de base: ${item.baseIndex}`,
                     `Etages: ${item.floor}`,
                     `Charges: ${item.charges}`,
                     `Montant de la garantie: ${item.garanteeAmount}`,
-                    `Date de la signature: ${item.signatureDate}`,
+                    `Date de la signature: ${JSON.stringify(item.signatureDate).substring(1, 11)}`,
                     `Index d'entré d'eau: ${item.waterMeterIndexInput}`,
                     `Index d'entre de gaz: ${item.gazMeterIndexInput}`,
                     `Index d'entre d'élécrticité: ${item.electricityMeterIndexInput}`,
                     `Caution payée: ${item.depositPaid}`,
                     `1er mois payé: ${item.firstMonthPaid}`,
-                    `Date d'entré: ${item.entryDate}`,
-                    `Date de sortie: ${item.releaseDate}`,
+                    `Date d'entré: ${JSON.stringify(item.entryDate).substring(1, 11)}`,
+                    `Date de sortie: ${JSON.stringify(item.releaseDate).substring(1, 11)}`,
                     `Index de sortie d'eau: ${item.waterMeterIndexOutput}`,
                     `Index de sortie de gaz: ${item.gazMeterIndexOutput}`,
                     `Index de sortie d'électricité: ${item.electricityMeterIndexOutput}`,
@@ -41,8 +41,8 @@ export const LeasePage = () => {
                         id={item.leaseId}
                         typeItem={"Lease"}
                         imagePath={Lease}
-                        title={houseObject.type + ": " + houseObject.adress}
-                        subheader={"Locataire: " + ownerObject.firstName + " " + ownerObject.lastName}
+                        title={houseObject?.type + ": " + houseObject?.adress}
+                        subheader={"Locataire: " + ownerObject?.firstName + " " + ownerObject?.lastName}
                         cont={arrayValue}
                     />)
             })}

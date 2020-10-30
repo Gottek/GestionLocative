@@ -18,12 +18,9 @@ import {deletePerson} from "../Store/Actions/PersonAction";
 import {deleteBuilding, deleteHome} from "../Store/Actions/BuildingAction";
 import {deleteLease} from "../Store/Actions/LeaseAction";
 import { useHistory } from "react-router-dom";
+import "../CSS/CardView.css"
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        width: 345,
-        margin: 20,
-    },
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
@@ -59,13 +56,18 @@ export default function PersonalCard(props) {
         else if (typeItem === "Owner" || typeItem === "Guarantor") dispatch(deletePerson(id, typeItem))
         else dispatch(deleteLease(id, typeItem))
     }
-    const redirection=()=>{
-        history.push("/AddBuilding");
+    const redirection=(typeItem)=>{
+        if(typeItem!=="Lease"){
+        const path=(typeItem==="Home")?"/AddBuilding":"/AddPerson";
+        const dataType=(typeItem==="Home"||typeItem==="Lease")?{id: props.id}:{id: props.id,typePerson:typeItem}
+        history.push({pathname: path, state: dataType});
+        }
     }
     return (
         <div>
-            <Card className={classes.root} onClick={redirection} >
+            <Card className={"contentCard"} >
                 <CardHeader
+                    onClick={()=>redirection(props.typeItem)}
                     avatar={
                         <Avatar aria-label="recipe" className={classes.avatar}>
                             R
@@ -75,6 +77,7 @@ export default function PersonalCard(props) {
                     subheader={props.subheader}
                 />
                 <CardMedia
+                    onClick={()=>redirection(props.typeItem)}
                     className={classes.media}
                     image={props.imagePath}
                 />

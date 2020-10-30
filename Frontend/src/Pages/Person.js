@@ -12,7 +12,7 @@ export const PersonPage = () => {
             {ownerArray.map((item, index) => {
                 const arrayValue = [
                     `Civilité: ${item.civility}`,
-                    `Sexe: ${item.sex}`,
+                    `Sexe: ${item.gender}`,
                     `Adresse: ${item.address}`,
                     `Code postal: ${item.zipCode}`,
                     `Ville: ${item.city}`,
@@ -20,9 +20,9 @@ export const PersonPage = () => {
                     `Email: ${item.email}`,
                     `Age: ${item.age}`,
                     `Lieu de naissance: ${item.placeOfBirth}`,
-                    `Date de naissance: ${item.birthDate}`,
+                    `Date de naissance: ${JSON.stringify(item.birthDate)}`,
                     `Numéro de registre: ${item.nationalRegister}`,
-                    `Numéro de gsm: ${item.gsmNumber}`
+                    `Numéro de gsm: ${item.phoneNumber}`
                 ]
                 return (
                     <CardView
@@ -31,7 +31,7 @@ export const PersonPage = () => {
                         typeItem={"Owner"}
                         imagePath={Owner}
                         title={item.firstName + " " + item.lastName}
-                        subheader={item.birthDate}
+                        subheader={JSON.stringify(item.birthDate).substring(1, 11)}
                         cont={arrayValue}
                     />)
             })}

@@ -13,13 +13,13 @@ export const GuarantorPage = () => {
             {guarantorArray.map((item, index) => {
                 const arrayValue = [
                     `Civilité: ${item.civility}`,
-                    `Sexe: ${item.sex}`,
+                    `Sexe: ${item.gender}`,
                     `Adresse: ${item.address}`,
                     `Code postal: ${item.zipCode}`,
                     `Ville: ${item.city}`,
                     `Email: ${item.email}`,
                     `Pays: ${item.country}`,
-                    `Numéro de gsm: ${item.gsmNumber}`
+                    `Numéro de gsm: ${item.phoneNumber}`
                 ]
                 return (
                     <CardView
@@ -28,7 +28,7 @@ export const GuarantorPage = () => {
                         typeItem={"Guarantor"}
                         imagePath={Guarantor}
                         title={item.firstName + " " + item.lastName}
-                        subheader={item.birthDate}
+                        subheader={""}
                         cont={arrayValue}
                     />)
             })}

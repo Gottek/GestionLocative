@@ -3,3 +3,14 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.contentCard {
+    width: 345px;
+    margin: 20px;
+}
+
+.contentCard:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

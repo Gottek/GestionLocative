@@ -1,8 +1,8 @@
 class Person{
-    constructor(id,civility, sex,firstName,lastName,address, zipCode, city, country,email,gsmNumber) {
+    constructor(id,civility, gender,firstName,lastName,address, zipCode, city, country,email,phoneNumber) {
         this.id=id;
         this.civility=civility;
-        this.sex=sex;
+        this.gender=gender;
         this.firstName=firstName;
         this.lastName=lastName;
         this.address=address;
@@ -10,7 +10,7 @@ class Person{
         this.city=city;
         this.country=country;
         this.email=email;
-        this.gsmNumber=gsmNumber;
+        this.phoneNumber=phoneNumber;
     }
 }
 export default Person;

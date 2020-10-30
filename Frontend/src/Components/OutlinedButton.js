@@ -21,7 +21,7 @@ export default function OutlinedButtons(props) {
         <div className={classes.root}>
             <Button className={classes.buttonStyle} type="submit" variant="outlined" color="secondary"
                     startIcon={<AddIcon/>}>
-                Ajouter
+                {props.textValue}
             </Button>
         </div>
     );

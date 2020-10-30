@@ -8,6 +8,7 @@ import Selects from "../Components/Selects";
 import Divider from "@material-ui/core/Divider";
 import {number} from "prop-types";
 import {addLease} from "../Store/Actions/LeaseAction";
+import DateTimePicker from "../Components/DateTimePicker";
 
 
 export const AddLeasePage = () => {
@@ -16,6 +17,7 @@ export const AddLeasePage = () => {
     const [houseObject,setHouseObject]=useState({adress:null, type:null, etage:null, rentPrice:0});
     const arrayNoYes=[{id:1,value:"OUI"}, {id:2,value:"NON"}];
     const disptach = useDispatch();
+    // const houseObject=useSelector(state=>state.reducerBuildingKey.allBuilding.find(item=>item.id===props.location.state?.id))
 
     console.log("je suis appeler");
     const onSubmit = event => {
@@ -40,13 +42,15 @@ export const AddLeasePage = () => {
                                 <Field subscription={{value: true}} name="personId">{({input, meta}) =>
                                     <Selects required fullWidth callBackValue={()=>{}} arrayValue={personArray}  {...input} label={"Nom personne"} variant="outlined"/>}
                                 </Field>
-                                <Field subscription={{value: true}}  name="leaseStartDate">{({input, meta}) =>
-                                    <TextField  required fullWidth {...input} label={"Date de début"}
-                                               variant="outlined"/>}
+                                <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
+                                       name="leaseStartDate">{({input, meta}) =>
+                                    <DateTimePicker fullWidth valeur={{...input}} label={"Date de début"}
+                                                    variant="outlined"/>}
                                 </Field>
-                                <Field  subscription={{value: true}} name="leaseEndDate">{({input, meta}) =>
-                                    <TextField required {...input} fullWidth  label={"Date de fin"}
-                                               variant="outlined"/>}
+                                <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
+                                       name="leaseEndDate">{({input, meta}) =>
+                                    <DateTimePicker fullWidth valeur={{...input}} label={"Date de fin"}
+                                                    variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="leaseTerm">{({input, meta}) =>
                                     <TextField required fullWidth {...input} label={"Durée du bien"}
@@ -82,17 +86,20 @@ export const AddLeasePage = () => {
                                     <TextField type="number" required fullWidth {...input} label={"Charges"}
                                                variant="outlined"/>}
                                 </Field>
-                                <Field subscription={{value: true}} name="entryDate">{({input, meta}) =>
-                                    <TextField required fullWidth {...input} label={"Date d'entrée"}
-                                               variant="outlined"/>}
+                                <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
+                                       name="entryDate">{({input, meta}) =>
+                                    <DateTimePicker fullWidth valeur={{...input}} label={"Date d'entrée"}
+                                                    variant="outlined"/>}
                                 </Field>
-                                <Field subscription={{value: true}} name="releaseDate">{({input, meta}) =>
-                                    <TextField required fullWidth {...input} label={"Date de sortie"}
-                                               variant="outlined"/>}
+                                <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
+                                       name="releaseDate">{({input, meta}) =>
+                                    <DateTimePicker fullWidth valeur={{...input}} label={"Date de sortie"}
+                                                    variant="outlined"/>}
                                 </Field>
-                                <Field subscription={{value: true}} name="signatureDate">{({input, meta}) =>
-                                    <TextField required fullWidth {...input} label={"Date de signature"}
-                                               variant="outlined"/>}
+                                <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
+                                       name="signatureDate">{({input, meta}) =>
+                                    <DateTimePicker fullWidth valeur={{...input}} label={"Date de signature"}
+                                                    variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="waterMeterIndexInput">{({input, meta}) =>
                                     <TextField type="number" required fullWidth {...input}
@@ -115,10 +122,10 @@ export const AddLeasePage = () => {
                                 <Field subscription={{value: true}} name="depositPaid">{({input, meta}) =>
                                     <Selects required fullWidth callBackValue={()=>{}} arrayValue={arrayNoYes}  {...input} label={"Caution payée"} variant="outlined"/>}
                                 </Field>
-                                <Field subscription={{value: true}} name="depositPaymentDate">{({input, meta}) =>
-                                    <TextField required fullWidth {...input}
-                                               label={"Date de paiement caution"}
-                                               variant="outlined"/>}
+                                <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
+                                       name="depositPaymentDate">{({input, meta}) =>
+                                    <DateTimePicker fullWidth valeur={{...input}} label={"Date de paiement de caution"}
+                                                    variant="outlined"/>}
                                 </Field>
                             </div>
                             <Divider orientation="vertical" flexItem style={{margin: 20}}/>
@@ -149,9 +156,9 @@ export const AddLeasePage = () => {
 
                             </div>
                         </div>
-                        <div style={{width: "100%"}}>
-                            <OutlinedButton/>
-                        </div>
+                    </div>
+                    <div style={{width: "100%"}}>
+                        <OutlinedButton textValue={"Ajouter"}/>
                     </div>
                 </form>
             )}

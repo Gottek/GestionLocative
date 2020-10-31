@@ -16,15 +16,9 @@ namespace Backend.Profiles
             CreateMap<OwnerUpdateDtos, Owner>();
             CreateMap<Owner,OwnerUpdateDtos>();
             // ------------------------------------------------------------------
-            /*CreateMap<Owner, OwnerReadDtos>();
-            CreateMap<OwnerCreateDtos, Owner>();
-            CreateMap<OwnerUpdateDtos, Owner>();
-            CreateMap<Owner,OwnerUpdateDtos>();
-            CreateMap<Owner, OwnerReadDtos>();
-            CreateMap<OwnerCreateDtos, Owner>();
-            CreateMap<OwnerUpdateDtos, Owner>();
-            CreateMap<Owner,OwnerUpdateDtos>();*/
-            
+            CreateMap<Home,Home>(); // une sorte d'update plus stylé que les autres
+            CreateMap<Owner,Owner>();
+            CreateMap<Lease,Lease>();
         }
     }
 }

@@ -35,11 +35,11 @@ namespace Backend.Controllers
         }
         
         [HttpGet("{id}",Name ="GetSingleOwner" )]
-        public ActionResult<OwnerReadDtos> GetSingleOwner(int id)
+        public ActionResult<Owner> GetSingleOwner(int id)
         {
             var singleOwner = _ownerRepository.getSpecificOwnerById(id);
             if (singleOwner == null) return NotFound();
-            return Ok(_mapper.Map<OwnerReadDtos>(singleOwner));
+            return Ok(singleOwner);
         }
         
         /*[HttpPost]
@@ -66,16 +66,15 @@ namespace Backend.Controllers
         }
         
         [HttpPut("{id}")]
-        public ActionResult UpdateOwner(int id , OwnerUpdateDtos updateOwnerDtos)
+        public ActionResult UpdateOwner(int id , Owner updateOwner)
         {
             var ownerInitial = _ownerRepository.getSpecificOwnerById(id);
-            _mapper.Map(updateOwnerDtos, ownerInitial);
-            _ownerRepository.updateAOwner(ownerInitial);
+            _mapper.Map(updateOwner, ownerInitial);
             _ownerRepository.SaveChange();
             return NoContent();
         }
         
-        [HttpPatch("{id}")]
+        /*[HttpPatch("{id}")]
         public ActionResult UpdateOwnerWithPatch(int id , JsonPatchDocument<OwnerUpdateDtos> patchDocument)
         {
             var ownerInitial = _ownerRepository.getSpecificOwnerById(id);
@@ -86,7 +85,7 @@ namespace Backend.Controllers
             _ownerRepository.updateAOwner(ownerInitial);
             _ownerRepository.SaveChange();
             return NoContent();
-        }
+        }*/
         
         [HttpDelete("{id}")]
         public ActionResult DeleteOwner(int id)

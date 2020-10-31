@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eda74c9-3a40-4974-8e61-5bfbdc2b40ed" name="Default Changelist" comment="">
+    <list default="true" id="e5026861-e64e-4c6c-af39-a7aebaafee48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.csproj" afterDir="false" />
@@ -46,6 +46,8 @@
       <change beforePath="$PROJECT_DIR$/../Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/src/Api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Components/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/CreateDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/CreateDocument.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,69 +57,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Models/Owner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IOwner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dtos/OwnerDtos/OwnerReadDtos.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Data/IPropRepo.cs" />
-        <option value="$PROJECT_DIR$/Data/IOwnerRepo.cs" />
-        <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/appsettings.json" />
-        <option value="$PROJECT_DIR$/Dtos/OwnerDtos.cs" />
-        <option value="$PROJECT_DIR$/Data/RandomRepo.cs" />
-        <option value="$PROJECT_DIR$/Dtos/OwnerReadDtos.cs" />
-        <option value="$PROJECT_DIR$/Models/Person.cs" />
-        <option value="$PROJECT_DIR$/Dtos/PersonReadDtos.cs" />
-        <option value="$PROJECT_DIR$/Data/IPerson.cs" />
-        <option value="$PROJECT_DIR$/Dtos/OwnerCreateDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/OwnerUpdateDtos.cs" />
-        <option value="$PROJECT_DIR$/Data/IOwner.cs" />
-        <option value="$PROJECT_DIR$/Data/AnotherRandomRepo.cs" />
-        <option value="$PROJECT_DIR$/Data/CommanderContexte.cs" />
-        <option value="$PROJECT_DIR$/Dtos/HomeDtos/OwnerReadDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/HomeDtos/OwnerUpdateDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/HomeDtos/OwnerCreateDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/LeaseDtos/OwnerCreateDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/LeaseDtos/OwnerReadDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/LeaseDtos/OwnerUpdateDtos.cs" />
-        <option value="$PROJECT_DIR$/Dtos/HomeDtos/HomeCreateDtos.cs" />
-        <option value="$PROJECT_DIR$/Data/objectOjbect.cs" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/Models/Home.cs" />
-        <option value="$PROJECT_DIR$/Models/Owner.cs" />
-        <option value="$PROJECT_DIR$/Models/Lease.cs" />
-        <option value="$PROJECT_DIR$/Profiles/Mapping.cs" />
-        <option value="$PROJECT_DIR$/Data/LeaseRepository.cs" />
-        <option value="$PROJECT_DIR$/Data/OwnerRepository.cs" />
-        <option value="$PROJECT_DIR$/Interfaces/IOwner.cs" />
-        <option value="$PROJECT_DIR$/Interfaces/ILease.cs" />
-        <option value="$PROJECT_DIR$/Interfaces/IHomes.cs" />
-        <option value="$PROJECT_DIR$/Controllers/OwnerController.cs" />
-        <option value="$PROJECT_DIR$/Data/HomeRepository.cs" />
-        <option value="$PROJECT_DIR$/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/Controllers/LeaseController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/OwnerController.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1ifBIlKCv6f2T0qn6rvHtEvOExM" />
+  <component name="ProjectId" id="1jecaPZ4URBxZppkaKZVM7Mc70I" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Backend: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Backend">
     <configuration name="Backend" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Backend.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -148,45 +108,23 @@
         <option name="Build" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue=".NET Launch Settings Profile.Backend" />
-      <item itemvalue=".NET Launch Settings Profile.Backend: IIS Express" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6eda74c9-3a40-4974-8e61-5bfbdc2b40ed" name="Default Changelist" comment="" />
-      <created>1602288696021</created>
+      <changelist id="e5026861-e64e-4c6c-af39-a7aebaafee48" name="Default Changelist" comment="" />
+      <created>1604168060965</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1602288696021</updated>
-      <workItem from="1602288728450" duration="7864000" />
-      <workItem from="1602362408334" duration="1287000" />
-      <workItem from="1602363823878" duration="638000" />
-      <workItem from="1602364869729" duration="27799000" />
-      <workItem from="1602514839290" duration="1743000" />
-      <workItem from="1602535879076" duration="3762000" />
-      <workItem from="1602609658426" duration="2686000" />
-      <workItem from="1602754652415" duration="2667000" />
-      <workItem from="1602943588830" duration="5706000" />
-      <workItem from="1602980535853" duration="2528000" />
-      <workItem from="1603111898327" duration="8207000" />
-      <workItem from="1603538433721" duration="20342000" />
-      <workItem from="1603630274568" duration="5931000" />
-      <workItem from="1603718620192" duration="6547000" />
-      <workItem from="1603850822786" duration="3440000" />
-      <workItem from="1604021637081" duration="3083000" />
-      <workItem from="1604024954961" duration="847000" />
-      <workItem from="1604057465552" duration="1431000" />
-      <workItem from="1604061411421" duration="14004000" />
+      <updated>1604168060965</updated>
+      <workItem from="1604168066425" duration="7255000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -198,55 +136,8 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="355" y="80" width="1017" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604057506726">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="355" y="80" width="1017" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1604057506726" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1604024758518">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1604024758518" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1604024758517">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1604024758517" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1604024758517">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1604024758517" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1604024758517">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1604024758517" />
-    <state x="634" y="22" width="331" height="678" key="RiderGenerateDialog" timestamp="1602756031919">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="634" y="22" width="331" height="678" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1602756031919" />
-    <state x="301" y="74" key="SettingsEditor" timestamp="1602418364788">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="301" y="74" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1602418364788" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1604108951946">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1600.860@0.0.1600.860" timestamp="1604108951946" />
-    <state x="92" y="92" width="1416" height="676" key="VCS.FileHistoryDialog" timestamp="1604072928814">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="92" y="92" width="1416" height="676" key="VCS.FileHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1604072928814" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1604115102534">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1604115102534" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1602416786207">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1602416786207" />
   </component>
 </project>

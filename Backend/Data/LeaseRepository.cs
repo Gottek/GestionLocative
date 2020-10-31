@@ -26,7 +26,7 @@ namespace Backend.Data
 
         public Lease getSpecificLeaseById(int id)
         {
-            return _contexte.Leases.FirstOrDefault(lease => lease.id == id);
+            return _contexte.Leases.FirstOrDefault(lease => lease.LeaseId == id);
         }
 
         public void createLease(Lease lease)

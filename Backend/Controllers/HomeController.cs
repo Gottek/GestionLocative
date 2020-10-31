@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AutoMapper;
 using Backend.Data;
 using Backend.Dtos;
@@ -38,38 +39,38 @@ namespace Backend.Controllers
         }
         
         [HttpPost]
-        public ActionResult<HomeCreateDtos> CreateHome(HomeCreateDtos homeDtos)
+        public ActionResult<Home> CreateHome(Home home)
         {
-            var homeModel = _mapper.Map<Home>(homeDtos); 
-            _homesRepository.createHome(homeModel); 
+            _homesRepository.createHome(home); 
             _homesRepository.SaveChange();
 
-            var homeReadDtos = _mapper.Map<HomeReadDtos>(homeModel); 
-            return CreatedAtRoute(nameof(GetSingleHome), new {id = homeReadDtos.id},homeReadDtos);
+            return Ok(home);
+
         }
+
         
         [HttpPut("{id}")]
-        public ActionResult UpdateHome(int id , HomeUpdateDtos updateHomeDtos)
+        public ActionResult UpdateHome(int id , Home updateHome)
         {
             var homeInitial = _homesRepository.getSpecificHomeById(id);
-            _mapper.Map(updateHomeDtos, homeInitial);
-            _homesRepository.updateAHome(homeInitial);
+            _mapper.Map(updateHome, homeInitial);
+            //_homesRepository.updateAHome(homeInitial);
             _homesRepository.SaveChange();
-            return NoContent();
+            return Ok();
         }
         
-        [HttpPatch("{id}")]
-        public ActionResult UpdateHomeWithPatch(int id , JsonPatchDocument<HomeUpdateDtos> patchDocument)
-        {
-            var homeInitial = _homesRepository.getSpecificHomeById(id);
-            var patchHome = _mapper.Map<HomeUpdateDtos>(homeInitial);
-            patchDocument.ApplyTo(patchHome,ModelState);
-            if (!TryValidateModel(patchHome)) return ValidationProblem(ModelState);
-            _mapper.Map(patchHome, homeInitial);
-            _homesRepository.updateAHome(homeInitial);
-            _homesRepository.SaveChange();
-            return NoContent();
-        }
+        // [HttpPatch("{id}")]
+        // public ActionResult UpdateHomeWithPatch(int id , JsonPatchDocument<HomeUpdateDtos> patchDocument)
+        // {
+        //     var homeInitial = _homesRepository.getSpecificHomeById(id);
+        //     var patchHome = _mapper.Map<HomeUpdateDtos>(homeInitial);
+        //     patchDocument.ApplyTo(patchHome,ModelState);
+        //     if (!TryValidateModel(patchHome)) return ValidationProblem(ModelState);
+        //     _mapper.Map(patchHome, homeInitial);
+        //     _homesRepository.updateAHome(homeInitial);
+        //     _homesRepository.SaveChange();
+        //     return NoContent();
+        // }
         
         [HttpDelete("{id}")]
         public ActionResult DeleteHome(int id)

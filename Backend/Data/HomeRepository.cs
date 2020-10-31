@@ -36,10 +36,7 @@ namespace Backend.Data
             _contexte.Homes.Add(home);
         }
 
-        public void updateAHome(Home home)
-        {
-            throw new NotImplementedException();
-        }
+        public void updateAHome(Home home) { }
 
 
         public void deleteHome(Home home)

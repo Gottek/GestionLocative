@@ -3,14 +3,16 @@ using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend.Migrations
 {
     [DbContext(typeof(CommanderContexte))]
-    partial class CommanderContexteModelSnapshot : ModelSnapshot
+    [Migration("20201024204457_Ajout du rentPrice")]
+    partial class AjoutdurentPrice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,7 +66,7 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.Lease", b =>
                 {
-                    b.Property<int>("LeaseId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -121,9 +123,6 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("homeId")
-                        .HasColumnType("int");
-
                     b.Property<string>("leaseEndDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -135,9 +134,6 @@ namespace Backend.Migrations
                     b.Property<string>("leaseTerm")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("personId")
-                        .HasColumnType("int");
 
                     b.Property<string>("releaseDate")
                         .IsRequired()
@@ -163,7 +159,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("LeaseId");
+                    b.HasKey("id");
 
                     b.ToTable("Leases");
                 });

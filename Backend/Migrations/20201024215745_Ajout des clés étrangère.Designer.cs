@@ -3,14 +3,16 @@ using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend.Migrations
 {
     [DbContext(typeof(CommanderContexte))]
-    partial class CommanderContexteModelSnapshot : ModelSnapshot
+    [Migration("20201024215745_Ajout des clés étrangère")]
+    partial class Ajoutdesclésétrangère
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,8 +123,8 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("homeId")
-                        .HasColumnType("int");
+                    b.Property<string>("homeId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("leaseEndDate")
                         .IsRequired()
@@ -136,8 +138,8 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("personId")
-                        .HasColumnType("int");
+                    b.Property<string>("personId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("releaseDate")
                         .IsRequired()

@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend.Models
 {
     public class Lease
     {
         [Key]
-        public int id { get; set; }
+        public int LeaseId { get; set; }
         [Required]
         public string leaseStartDate { get; set; }
         [Required]
@@ -19,6 +20,8 @@ namespace Backend.Models
         [Required]
         public string floor { get; set; }
         [Required]
+        public string rentPrice { get; set; }
+        [Required]
         public string baseIndex { get; set; }
         [Required]
         public string charges { get; set; }
@@ -26,8 +29,6 @@ namespace Backend.Models
         public string garanteeAmount { get; set; }
         [Required]
         public string signatureDate { get; set; }
-        
-        
         [Required]
         public string waterMeterIndexInput { get; set; }
         [Required]
@@ -50,5 +51,10 @@ namespace Backend.Models
         public string gazMeterIndexOutput { get; set; }
         [Required]
         public string electricityMeterIndexOutput { get; set; }
+        [ForeignKey("Home")]
+        public int homeId { get; set; }
+        [ForeignKey("Owner")]
+        public int personId { get; set; }
+        
     }
 }

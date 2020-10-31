@@ -21,8 +21,13 @@ export const deleteItem = async (id, item) => {
         .then(r => console.log("delete OK"))
         .catch(err => console.log(err));
 }
-export const updateItem = async (id, item,object) => {
-    await axios.put(`http://localhost:5000/api/${item}/${id}`,object)
+export const updateItem = async (id, item, object) => {
+    await axios.put(`http://localhost:5000/api/${item}/${id}`, object)
         .then(r => console.log("update OK"))
+        .catch(err => console.log(err));
+}
+export const createWord = async (lease, path) => {
+    await axios.post(`http://localhost:5000/api/lease/word/` + path, lease)
+        .then(r => console.log("fichier créée"))
         .catch(err => console.log(err));
 }

@@ -35,6 +35,7 @@ import {useDispatch} from "react-redux";
 import {putAllPersons} from "../Store/Actions/PersonAction";
 import {putAllBuilding} from "../Store/Actions/BuildingAction";
 import {putAllLease} from "../Store/Actions/LeaseAction";
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 const drawerWidth = 240;
 
@@ -118,6 +119,7 @@ const iconRedirection =[
     {"id":5,"Name":"Baux","Component": <DescriptionIcon/>, "Redirect":"Lease"},
     {"id":6,"Name":"Ajouter Baux","Component": <NoteAddIcon/>, "Redirect":"AddLease"},
     {"id":7,"Name":"Garants","Component": <PeopleIcon/>, "Redirect":"Guarantor"},
+    {"id":8,"Name":"Télécharger docx","Component": <GetAppIcon/>, "Redirect":"CreateDocument"},
 ]
 
 

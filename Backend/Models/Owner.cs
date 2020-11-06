@@ -30,6 +30,7 @@ namespace Backend.Models
         public string email { get; set; }
         [Required]
         public string phoneNumber { get; set; }
+        public int ownerInCharge { get; set; }
         
     }
 }

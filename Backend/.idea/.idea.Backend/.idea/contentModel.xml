@@ -54,6 +54,8 @@
         <e p="20201024215745_Ajout des clés étrangère.Designer.cs" t="Include" />
         <e p="20201024220231_modif.cs" t="Include" />
         <e p="20201024220231_modif.Designer.cs" t="Include" />
+        <e p="20201106061148_ownerInCharge.cs" t="Include" />
+        <e p="20201106061148_ownerInCharge.Designer.cs" t="Include" />
         <e p="CommanderContexteModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">

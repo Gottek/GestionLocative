@@ -29,6 +29,12 @@ namespace Backend.Data
             return _contexte.Owners.FirstOrDefault(owner => owner.id == id);
         }
 
+        public Owner getSpecificGarantById(int id)
+        {
+            return _contexte.Owners.FirstOrDefault(owner => owner.ownerInCharge == id);
+
+        }
+
         public void createOwner(Owner owner)
         {
             if(owner==null) throw new ArgumentException(nameof(owner));

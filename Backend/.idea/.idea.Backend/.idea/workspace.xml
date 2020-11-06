@@ -23,31 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5026861-e64e-4c6c-af39-a7aebaafee48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/LeaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/LeaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/OwnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/OwnerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/HomeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/HomeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/LeaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/LeaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/OwnerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/OwnerRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IOwner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/CommanderContexteModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/CommanderContexteModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Lease.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Lease.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profiles/Mapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Profiles/Mapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Owner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Owner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/src/Api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/src/Components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/CreateDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/CreateDocument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Models/Guarantor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Models/Guarantor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/AddLease.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/AddLease.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/AddPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/AddPerson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/Guarantor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/Guarantor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Store/Reducers/PersonReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Store/Reducers/PersonReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +54,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Controllers/LeaseController.cs" />
         <option value="$PROJECT_DIR$/Controllers/OwnerController.cs" />
+        <option value="$PROJECT_DIR$/Models/Owner.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/IOwner.cs" />
+        <option value="$PROJECT_DIR$/Data/OwnerRepository.cs" />
+        <option value="$PROJECT_DIR$/Controllers/LeaseController.cs" />
       </list>
     </option>
   </component>
@@ -117,14 +114,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604168060965</updated>
-      <workItem from="1604168066425" duration="7255000" />
+      <workItem from="1604168066425" duration="7305000" />
+      <workItem from="1604627014171" duration="3847000" />
+      <workItem from="1604678680744" duration="1113000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -136,6 +135,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

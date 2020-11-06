@@ -37,6 +37,14 @@ namespace Backend.Controllers
         private readonly IHomes _homesRepository;
         private readonly IOwner _ownerRepository;
         private readonly IMapper _mapper;
+        private String[] chevronArray = {
+            "<civility>","<firstName>","<lastName>","<firstNameGarant>", "<lastNameGarant>", 
+            "<adress>", "<personAdresse>", "<phoneNumberGarant>", "<phoneNumber>",
+            "<roomNumber>", "<totalArea>", "<livingRoomArea>", "<diningRoomArea>", 
+            "<rentPrice>", "<flatRateCharges>", "<type>", "<email>", "<leaseStartDate>", "<leaseEndDate>",
+            "<leaseTerm>", "<releaseDate>", "<waterMeterIndexInput>", "<electricityMeterIndexInput>", "<electricityMeterIndexOutput>",
+            "<gazMeterIndexOutput>", "<gazMeterIndexInput>", "<waterMeterIndexOutput>", "<garanteeAmount>", "<signatureDate>", "<baseIndex>",
+            "<firstMonthPaid>", "<depositPaid>", "<depositPayementDate>", "<idBail>", "<entryDate>", "<gender>"}; 
         public LeaseController(ILease leaseRepo,IOwner ownerRepository,IHomes homesRepository, IMapper mapper)
         {
             _homesRepository = homesRepository;
@@ -118,6 +126,7 @@ namespace Backend.Controllers
         {
             var singleHome = _homesRepository.getSpecificHomeById(lease.homeId);
             var singleOwner = _ownerRepository.getSpecificOwnerById(lease.personId);
+            var singleGuarantor=_ownerRepository.getSpecificGarantById(singleOwner.id);
             Word.Application wordApp = new Word.Application();
             object ms = Missing.Value;
             Word.Document myWordDoc = null;
@@ -130,43 +139,23 @@ namespace Backend.Controllers
 
                 myWordDoc = wordApp.Documents.Open(ref filename, ref ms, ref readOnly, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms);
                 myWordDoc.Activate();
-
-                FindAndReplace(wordApp, "<civility>", singleOwner.civility);
-                FindAndReplace(wordApp, "<firstName>", singleOwner.firstName);
-                FindAndReplace(wordApp, "<lastName>", singleOwner.lastName);
-                FindAndReplace(wordApp, "<firstNameGarant>", singleOwner.firstName);
-                FindAndReplace(wordApp, "<lastNameGarant>", singleOwner.lastName);
-                FindAndReplace(wordApp, "<adress>", singleHome.adress);
-                FindAndReplace(wordApp, "<personAdresse>", singleOwner.address);
-                FindAndReplace(wordApp, "<phoneNumberGarant>", singleOwner.phoneNumber);
-                FindAndReplace(wordApp, "<phoneNumber>", singleOwner.phoneNumber);
-                FindAndReplace(wordApp, "<roomNumber>", singleHome.roomNumber);
-                FindAndReplace(wordApp, "<totalArea>", singleHome.totalArea);
-                FindAndReplace(wordApp, "<livingRoomArea>", singleHome.livingRoomArea);
-                FindAndReplace(wordApp, "<diningRoomArea>", singleHome.diningRoomArea);
-                FindAndReplace(wordApp, "<rentPrice>", singleHome.rentPrice);
-                FindAndReplace(wordApp, "<flatRateCharges>", singleHome.flatRateCharges);
-                FindAndReplace(wordApp, "<type>", singleHome.type);
-                FindAndReplace(wordApp, "<email>", singleOwner.email);
-                FindAndReplace(wordApp, "<leaseStartDate>", lease.leaseStartDate);
-                FindAndReplace(wordApp, "<leaseEndDate>", lease.leaseEndDate);
-                FindAndReplace(wordApp, "<leaseTerm>", lease.leaseTerm);
-                FindAndReplace(wordApp, "<releaseDate>", lease.releaseDate);
-                FindAndReplace(wordApp, "<waterMeterIndexInput>", lease.waterMeterIndexInput);
-                FindAndReplace(wordApp, "<electricityMeterIndexInput>", lease.electricityMeterIndexInput);
-                FindAndReplace(wordApp, "<electricityMeterIndexOutput>", lease.electricityMeterIndexOutput);
-                FindAndReplace(wordApp, "<gazMeterIndexOutput>", lease.gazMeterIndexOutput);
-                FindAndReplace(wordApp, "<gazMeterIndexInput>", lease.gazMeterIndexInput);
-                FindAndReplace(wordApp, "<waterMeterIndexOutput>", lease.waterMeterIndexOutput);
-                FindAndReplace(wordApp, "<garanteeAmount>", lease.garanteeAmount);
-                FindAndReplace(wordApp, "<signatureDate>", lease.signatureDate);
-                FindAndReplace(wordApp, "<baseIndex>", lease.baseIndex);
-                FindAndReplace(wordApp, "<firstMonthPaid>", lease.firstMonthPaid);
-                FindAndReplace(wordApp, "<depositPaid>", lease.depositPaid);
-                FindAndReplace(wordApp, "<depositPayementDate>", lease.depositPaymentDate);
-                FindAndReplace(wordApp, "<idBail>", lease.LeaseId);
-                FindAndReplace(wordApp, "<entryDate>", lease.entryDate);
-                FindAndReplace(wordApp, "<gender>", singleOwner.gender);
+                Object[] methodArray = { singleOwner.civility,singleOwner.firstName, singleOwner.lastName
+                    , singleGuarantor.firstName, singleGuarantor.lastName, singleHome.adress
+                    , singleOwner.address, singleGuarantor.phoneNumber, singleOwner.phoneNumber
+                    , singleHome.roomNumber, singleHome.totalArea, singleHome.livingRoomArea
+                    , singleHome.diningRoomArea, singleHome.rentPrice, singleHome.flatRateCharges
+                    , singleHome.type, singleOwner.email, lease.leaseStartDate
+                    , lease.leaseEndDate, lease.leaseTerm, lease.releaseDate
+                    , lease.waterMeterIndexInput, lease.electricityMeterIndexInput, lease.electricityMeterIndexOutput
+                    , lease.gazMeterIndexOutput, lease.gazMeterIndexInput, lease.waterMeterIndexOutput
+                    , lease.garanteeAmount, lease.signatureDate, lease.baseIndex
+                    , lease.firstMonthPaid, lease.depositPaid, lease.depositPaymentDate
+                    , lease.LeaseId, lease.entryDate, singleOwner.gender};
+                
+                for (int i = 0; i < chevronArray.Length; i++)
+                {
+                    FindAndReplace(wordApp,chevronArray[i],methodArray[i]);
+                }
             }
             else Console.WriteLine("Y'a eu un problème dans la création");
             

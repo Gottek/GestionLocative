@@ -8,6 +8,8 @@ namespace Backend.Data
         bool SaveChange();
         IEnumerable<Owner> getOwnerList();
         Owner getSpecificOwnerById(int id);
+        Owner getSpecificGarantById(int id);
+        
         void createOwner(Owner owner);
         void updateAOwner(Owner owner);
         void deleteOwner(Owner owner);

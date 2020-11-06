@@ -14,12 +14,11 @@ import DateTimePicker from "../Components/DateTimePicker";
 export const AddLeasePage = () => {
     const personArray = useSelector(state => state.reducerPersonKey.allOwner);
     const homeArray = useSelector(state => state.reducerBuildingKey.allBuilding);
+    const leaseArray = useSelector(state => state.reducerLeaseKey.allLease);
     const [houseObject,setHouseObject]=useState({adress:null, type:null, etage:null, rentPrice:0});
     const arrayNoYes=[{id:1,value:"OUI"}, {id:2,value:"NON"}];
     const disptach = useDispatch();
-    // const houseObject=useSelector(state=>state.reducerBuildingKey.allBuilding.find(item=>item.id===props.location.state?.id))
-
-    console.log("je suis appeler");
+    const availablePerson=personArray.filter(item=>leaseArray.every(itemo=>itemo.personId!==item.id))
     const onSubmit = event => {
         disptach(addLease(event));
     }
@@ -40,7 +39,7 @@ export const AddLeasePage = () => {
                                     <Selects required fullWidth callBackValue={changeHouseID} arrayValue={homeArray}  {...input} label={"Adresse maison"} variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} name="personId">{({input, meta}) =>
-                                    <Selects required fullWidth callBackValue={()=>{}} arrayValue={personArray}  {...input} label={"Nom personne"} variant="outlined"/>}
+                                    <Selects required fullWidth callBackValue={()=>{}} arrayValue={availablePerson}  {...input} label={"Nom personne"} variant="outlined"/>}
                                 </Field>
                                 <Field subscription={{value: true}} defaultValue={"2000-01-01T18:25:43.511Z"}
                                        name="leaseStartDate">{({input, meta}) =>

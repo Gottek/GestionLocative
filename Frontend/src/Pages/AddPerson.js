@@ -8,6 +8,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {addPerson, updatePerson} from "../Store/Actions/PersonAction";
 import Divider from "@material-ui/core/Divider";
 import DateTimePicker from "../Components/DateTimePicker";
+import Selects from "../Components/Selects";
 
 
 export const AddPersonPage = (props) => {
@@ -15,7 +16,8 @@ export const AddPersonPage = (props) => {
     const radioObject = [{name: "Homme"}, {name: "Femme"}]
     const radioObjectLoc = [{name: "Locataire"}, {name: "Garant"}]
     const [isOwner,setIsOwner]=useState(true);
-    const ownerObject=useSelector(state=>state.reducerPersonKey.allOwner.find(item=>item.id===props.location.state?.id))
+    const ownerArray=useSelector(state=>state.reducerPersonKey.allOwner)
+    const ownerObject=ownerArray.find(item=>item.id===props.location.state?.id)
     const guarantorObject=useSelector(state=>state.reducerPersonKey.allGuarantor.find(item=>item.id===props.location.state?.id))
 
     //const formArray=[{name: ""}] solution a élaborer plus tard
@@ -23,6 +25,7 @@ export const AddPersonPage = (props) => {
     const changementType=value=> setIsOwner((value.target.value === "Locataire"))
     const disptach = useDispatch();
     const onSubmit = event => {
+        console.log(event);
         if(props.location.state){
             event.id=props.location.state.id;
             disptach(updatePerson(event,props.location.state.typePerson))
@@ -79,6 +82,11 @@ export const AddPersonPage = (props) => {
                                     <TextField fullWidth {...input} id="outlined-basic" label={"Pays"}
                                                variant="outlined"/>}
                                 </Field>
+                                {!isOwner&&<Field subscription={{value: true}} name="ownerInCharge">{({input, meta}) =>
+                                    <Selects required fullWidth callBackValue={()=>{}}
+                                             arrayValue={ownerArray}  {...input} label={"Locataire pour le garant"}
+                                             variant="outlined"/>}
+                                </Field>}
 
                             </div>
                             <Divider orientation="vertical" flexItem style={{margin: 20}}/>

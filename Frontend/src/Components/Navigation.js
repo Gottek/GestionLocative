@@ -164,8 +164,8 @@ export default function MiniDrawer() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap>
-                        C'est de la gestion locative gros
+                    <Typography color={"secondary"} variant="h6" noWrap>
+                        Gestion locative
                     </Typography>
                 </Toolbar>
             </AppBar>

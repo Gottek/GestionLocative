@@ -19,6 +19,7 @@ export const GuarantorPage = () => {
                     `Ville: ${item.city}`,
                     `Email: ${item.email}`,
                     `Pays: ${item.country}`,
+                    `Id de la personne à charge: ${item.ownerInCharge}`,
                     `Numéro de gsm: ${item.phoneNumber}`
                 ]
                 return (

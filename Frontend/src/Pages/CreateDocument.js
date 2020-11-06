@@ -70,7 +70,7 @@ export const CreateDocumentPage = () => {
             else if(item.name==="Etat des lieux de sortie") thePath="Release"
             else if(item.name==='Congé de bail') thePath="Holiday"
             else if(item.name==='Résiliation anticipée du bail') thePath="Cancellation"
-            createWord(item.lease,thePath).then(r  =>console.log("le"));
+            createWord(item.lease,thePath).then();
         })
     }
     return (

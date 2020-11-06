@@ -9,7 +9,7 @@ import {
 
 const initialState = {
     allGuarantor: [],
-    allOwner: []
+    allOwner: [],
 };
 
 export const PersonReducer = (state = initialState, action) => {

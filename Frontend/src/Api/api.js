@@ -6,6 +6,7 @@ export const addItem = async (typeItem, object) => {
         .then(r => anItem = r.data)
         .catch(err => console.log(err));
     console.log(anItem);
+    console.log("grosse reussite");
     return anItem;
 }
 export const getAllItems = async (typeItem) => {

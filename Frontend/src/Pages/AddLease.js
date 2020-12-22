@@ -19,10 +19,12 @@ export const AddLeasePage = () => {
     const arrayNoYes=[{id:1,value:"OUI"}, {id:2,value:"NON"}];
     const disptach = useDispatch();
     const availablePerson=personArray.filter(item=>leaseArray.every(itemo=>itemo.personId!==item.id))
+
     const onSubmit = event => {
         disptach(addLease(event));
     }
     const changeHouseID=(event)=> {
+        console.log(event);
         const specificHouse=homeArray.find(item=>item.id===event);
         setHouseObject(specificHouse)
     }

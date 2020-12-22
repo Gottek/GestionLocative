@@ -28,12 +28,12 @@ namespace Backend.Data
 
         public void updateAHome(Home home)
         {
-            Console.WriteLine("diosfiefe");
+            throw new NotImplementedException();
         }
 
         public void deleteHome(Home home)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

@@ -55,6 +55,6 @@ namespace Backend.Models
         public int homeId { get; set; }
         [ForeignKey("Owner")]
         public int personId { get; set; }
-        
+
     }
 }

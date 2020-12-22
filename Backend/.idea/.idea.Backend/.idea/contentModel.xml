@@ -9,6 +9,7 @@
       <e p="Backend.csproj" t="IncludeRecursive" />
       <e p="Backend.sln" t="IncludeFlat" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Caution" t="Include" />
       <e p="Controllers" t="Include">
         <e p="HomeController.cs" t="Include" />
         <e p="LeaseController.cs" t="Include" />
@@ -38,6 +39,7 @@
           <e p="OwnerUpdateDtos.cs" t="Include" />
         </e>
       </e>
+      <e p="Entry" t="Include" />
       <e p="Interfaces" t="Include">
         <e p="IHomes.cs" t="Include" />
         <e p="ILease.cs" t="Include" />

@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -8,6 +11,8 @@ using Backend.Dtos;
 using Backend.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
+using System.Text;
 using Newtonsoft.Json;
 using BigFile=System.IO.File;
 using Word = Microsoft.Office.Interop.Word;
@@ -96,20 +101,27 @@ namespace Backend.Controllers
             _leaseRepository.SaveChange();
             return NoContent();
         }
-        
+        [HttpGet("download/{name}")]
+        public IActionResult GetBlobDownload(string name)
+        {
+            string link=@"C:\Users\Amarl\Desktop\Exemplaire"+name+".docx";
+            var net = new WebClient();
+            var data = net.DownloadData(link);
+            var content = new MemoryStream(data);
+            var contentType = "application/vnd.ms-word";
+            var fileName = "Exemplaire"+name+".docx";
+            return File(content, contentType, fileName);
+        }
         
         [HttpPost("word/{path}")]
-        public ActionResult<LeaseReadDtos> makeWordDocument(Lease lease, string path)
+        public IActionResult makeWordDocument(Lease lease, string path)
         {
-            // Console.WriteLine(path);
-            // Console.WriteLine(saleObject.garanteeAmount);
             string fileName = @"C:\Users\Amarl\Documents\Template" + path+".docx";
             string saveAs = @"C:\Users\Amarl\Desktop\Exemplaire" + path+lease.LeaseId+".docx";
             CreateWordDocument(fileName,saveAs,lease);
             return Ok();
         }
-        
-        
+
         private void FindAndReplace(Word.Application wordApp, object Chevron, object textReplaced)
         {
             wordApp.Selection.Find.Execute(ref Chevron,
@@ -124,7 +136,7 @@ namespace Backend.Controllers
 
         private void CreateWordDocument(object filename, object SaveAs, Lease lease)
         {
-            var singleHome = _homesRepository.getSpecificHomeById(lease.homeId);
+            var singleHome = _homesRepository.getSpecificHomeById(lease.homeId); 
             var singleOwner = _ownerRepository.getSpecificOwnerById(lease.personId);
             var singleGuarantor=_ownerRepository.getSpecificGarantById(singleOwner.id);
             Word.Application wordApp = new Word.Application();
@@ -139,6 +151,44 @@ namespace Backend.Controllers
 
                 myWordDoc = wordApp.Documents.Open(ref filename, ref ms, ref readOnly, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms, ref ms);
                 myWordDoc.Activate();
+                
+                // Console.WriteLine(singleOwner.civility);
+                // Console.WriteLine(singleOwner.firstName);
+                // Console.WriteLine(singleOwner.lastName);
+                // Console.WriteLine(singleGuarantor.firstName);
+                // Console.WriteLine(singleGuarantor.lastName); 
+                // Console.WriteLine(singleHome.adress);
+                // Console.WriteLine(singleOwner.address);
+                // Console.WriteLine(singleGuarantor.phoneNumber);
+                // Console.WriteLine(singleOwner.phoneNumber);
+                // Console.WriteLine(singleHome.roomNumber);
+                // Console.WriteLine(singleHome.totalArea);
+                // Console.WriteLine(singleHome.livingRoomArea);
+                // Console.WriteLine(singleHome.diningRoomArea);
+                // Console.WriteLine(singleHome.rentPrice);
+                // Console.WriteLine(singleHome.flatRateCharges);
+                // Console.WriteLine(singleHome.type);
+                // Console.WriteLine(singleOwner.email);
+                // Console.WriteLine(lease.leaseStartDate);
+                // Console.WriteLine(lease.leaseEndDate);
+                // Console.WriteLine(lease.leaseTerm);
+                // Console.WriteLine(lease.releaseDate);
+                // Console.WriteLine(lease.waterMeterIndexInput);
+                // Console.WriteLine(lease.electricityMeterIndexInput);
+                // Console.WriteLine(lease.electricityMeterIndexOutput);
+                // Console.WriteLine(lease.gazMeterIndexOutput);
+                // Console.WriteLine(lease.gazMeterIndexInput);
+                // Console.WriteLine(lease.waterMeterIndexOutput);
+                // Console.WriteLine(lease.garanteeAmount);
+                // Console.WriteLine(lease.signatureDate);
+                // Console.WriteLine(lease.baseIndex);
+                // Console.WriteLine(lease.firstMonthPaid);
+                // Console.WriteLine(lease.depositPaid);
+                // Console.WriteLine(lease.depositPaymentDate);
+                // Console.WriteLine(lease.LeaseId);
+                // Console.WriteLine(lease.entryDate);
+                // Console.WriteLine(singleOwner.gender);
+                
                 Object[] methodArray = { singleOwner.civility,singleOwner.firstName, singleOwner.lastName
                     , singleGuarantor.firstName, singleGuarantor.lastName, singleHome.adress
                     , singleOwner.address, singleGuarantor.phoneNumber, singleOwner.phoneNumber
@@ -159,11 +209,11 @@ namespace Backend.Controllers
             }
             else Console.WriteLine("Y'a eu un problème dans la création");
             
-
             myWordDoc.SaveAs2(ref SaveAs);
             myWordDoc.Close();
             wordApp.Quit();
             Console.WriteLine("Le fichier "+SaveAs+" a été créée");
+
         }
     }
 }

@@ -26,22 +26,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/LeaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/LeaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/OwnerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/OwnerRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/IOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IOwner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/CommanderContexteModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/CommanderContexteModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Owner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Owner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/objectOjbect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/objectOjbect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Lease.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Lease.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Backend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/src/Api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/Components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/Models/Guarantor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Models/Guarantor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/AddLease.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/AddLease.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/AddPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/AddPerson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/Guarantor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/Guarantor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/Store/Reducers/PersonReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Store/Reducers/PersonReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/Pages/CreateDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/Pages/CreateDocument.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +51,12 @@
         <option value="$PROJECT_DIR$/Models/Owner.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IOwner.cs" />
         <option value="$PROJECT_DIR$/Data/OwnerRepository.cs" />
+        <option value="$PROJECT_DIR$/Models/Home.cs" />
+        <option value="$PROJECT_DIR$/Data/HomeRepository.cs" />
+        <option value="$PROJECT_DIR$/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/Data/objectOjbect.cs" />
+        <option value="$PROJECT_DIR$/Models/coucou.cs" />
+        <option value="$PROJECT_DIR$/Models/Lease.cs" />
         <option value="$PROJECT_DIR$/Controllers/LeaseController.cs" />
       </list>
     </option>
@@ -71,6 +70,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -116,7 +121,12 @@
       <updated>1604168060965</updated>
       <workItem from="1604168066425" duration="7305000" />
       <workItem from="1604627014171" duration="3847000" />
-      <workItem from="1604678680744" duration="1113000" />
+      <workItem from="1604678680744" duration="1543000" />
+      <workItem from="1604965054008" duration="4839000" />
+      <workItem from="1605045769206" duration="5493000" />
+      <workItem from="1605722286552" duration="4432000" />
+      <workItem from="1608643033127" duration="10971000" />
+      <workItem from="1608668307980" duration="7554000" />
     </task>
     <servers />
   </component>
@@ -139,5 +149,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="634" y="131" key="RiderGenerateDialog" timestamp="1604966431409">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1604966431409" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1608649071564">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1608649071564" />
   </component>
 </project>
